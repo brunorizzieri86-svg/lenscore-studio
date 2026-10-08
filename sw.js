@@ -1,4 +1,4 @@
-const CACHE='lume-shell-v0.6.1';
+const CACHE='lume-shell-v0.6.2';
 const FILES=['./brand.js','./license-core.js','./studio.js','./apple-touch-icon.png','./assets/brand/icon.svg','./assets/cover-people.jpg','./assets/cover-desk.jpg','./assets/cover-sunset.jpg','./assets/cover-capture.jpg','./assets/cover-prints.jpg','./assets/cover-archive.jpg','./assets/cover-portfolio.jpg','./assets/cover-time.jpg','./assets/camera-dials.jpg','./','./index.html','./style.css','./app.js','./ux.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./assets/01-1000773577.jpg','./assets/02-1000773576.jpg','./assets/03-1000773578.jpg','./assets/04-1000773571.jpg','./assets/05-1000773572.jpg','./assets/06-1000773575.jpg','./assets/07-1000773567.jpg'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('lume-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

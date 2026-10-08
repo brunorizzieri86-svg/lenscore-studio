@@ -1,12 +1,14 @@
-LENS CORE STUDIO V0.6.1 — publicação
+LENS CORE STUDIO V0.6.2 — publicação
 
 1. Extraia o ZIP.
 2. Publique todos os arquivos e a pasta assets na mesma pasta do site.
 3. Use HTTPS. Não publique apenas o index.html do ZIP: ele depende dos arquivos locais.
-4. No celular, abra o endereço no navegador e use Instalar aplicativo ou Adicionar à tela inicial.
+4. No celular ou desktop, abra o endereço e use o botão Instalar LENS CORE STUDIO. No iPhone/iPad, use Compartilhar > Adicionar à Tela de Início.
 5. Antes de atualizar uma instalação antiga, exporte o backup.
 6. Não publique o gerador de códigos. Ele é entregue separadamente e contém a chave privada do administrador.
 
 O index.html AUTÔNOMO entregue fora do ZIP é para teste local. Ele usa a base de preview; o PWA usa a base anterior do LUME para preservar os registros na mesma origem.
+
+O teste gratuito começa após o primeiro cadastro e dura 30 dias. A demonstração aceita até 2 novos cadastros por função neste navegador.
 
 Dados e licenças são locais por navegador/aparelho. Mensagens e solicitações abrem o WhatsApp e são enviadas pelo usuário. Não há processamento automático de pagamentos.
