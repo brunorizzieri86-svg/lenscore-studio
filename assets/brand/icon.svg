@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect width="512" height="512" fill="#111719" /><g transform="translate(31 125) scale(.5)"><g transform="translate(450 315) scale(1.28)" stroke-linecap="round" stroke-linejoin="round" id="g13">
+    <path d="M -205 132 L -205 -17 Q -206 -88 -136 -98 L -85 -110 Q -63 -120 -41 -149 Q -22 -182 13 -182 L 78 -182 Q 114 -181 139 -144 Q 163 -115 199 -104 Q 227 -93 230 -49 L 230 126" fill="none" stroke="#C69C7D" stroke-width="5" id="path1" />
+    <path d="M -205 -8 L -100 -8 Q -84 -8 -84 -29 L -84 -92 Q -84 -111 -104 -108 M -110 -9 Q -145 15 -145 55 L -145 130" fill="none" stroke="#C69C7D" stroke-width="3" opacity=".85" id="path2" />
+    <path d="M -66 -125 Q -44 -211 25 -209 L 79 -209 Q 143 -209 167 -127 M -43 -141 Q -17 -190 29 -191 L 81 -191 Q 122 -190 141 -149" fill="none" stroke="#C69C7D" stroke-width="3.7" id="path3" />
+    <rect x="-17" y="-220" width="24" height="9" rx="3" stroke="#C69C7D" stroke-width="3" fill="none" id="rect3" />
+    <rect x="67" y="-220" width="24" height="9" rx="3" stroke="#C69C7D" stroke-width="3" fill="none" id="rect4" />
+    <ellipse cx="-133" cy="-72" rx="30" ry="21" transform="rotate(-17 -133 -72)" stroke="#C69C7D" stroke-width="3.8" fill="none" id="ellipse4" />
+    <path d="M 226 18 Q 259 14 258 51 Q 258 91 231 94" stroke="#C69C7D" fill="none" stroke-width="4" id="path4" />
+    <circle r="128" fill="#C69C7D" stroke="none" id="circle4" />
+    <circle r="110" fill="#181A1D" stroke="#59758A" stroke-width="8" id="circle5" />
+    <circle r="97" fill="#2F4050" stroke="#59758A" stroke-width="9" id="circle6" />
+    <circle r="80" fill="#71879A" stroke="#59758A" stroke-width="11" id="circle7" />
+    <circle r="57" fill="#465D70" stroke="#59758A" stroke-width="8" id="circle8" />
+    <circle r="30" fill="#283C4E" stroke="#59758A" stroke-width="7" id="circle9" />
+    <circle r="15" fill="#16242F" stroke="#59758A" stroke-width="3" id="circle10" />
+    <circle cx="-28" cy="-34" r="17" fill="#FFFFFF" opacity=".94" stroke="none" id="circle11" />
+    <circle cx="32" cy="35" r="12" fill="#FFFFFF" opacity=".70" stroke="none" id="circle12" />
+    <circle cx="-57" cy="-62" r="14" fill="#FFFFFF" opacity=".30" stroke="none" id="circle13" />
+  </g>
+  </g></svg>
