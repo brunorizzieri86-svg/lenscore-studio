@@ -1,5 +1,35 @@
-const CACHE='lume-shell-v0.6.2';
-const FILES=['./brand.js','./license-core.js','./studio.js','./apple-touch-icon.png','./assets/brand/icon.svg','./assets/cover-people.jpg','./assets/cover-desk.jpg','./assets/cover-sunset.jpg','./assets/cover-capture.jpg','./assets/cover-prints.jpg','./assets/cover-archive.jpg','./assets/cover-portfolio.jpg','./assets/cover-time.jpg','./assets/camera-dials.jpg','./','./index.html','./style.css','./app.js','./ux.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./assets/01-1000773577.jpg','./assets/02-1000773576.jpg','./assets/03-1000773578.jpg','./assets/04-1000773571.jpg','./assets/05-1000773572.jpg','./assets/06-1000773575.jpg','./assets/07-1000773567.jpg'];
-self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
-self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('lume-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==self.location.origin)return;if(e.request.mode==='navigate'){e.respondWith(fetch(e.request).catch(()=>caches.match('./index.html')));return}e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request)))});
+const CACHE = 'lenscore-studio-v0.7.1';
+const APP_SHELL = [
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './icon.svg',
+  './icon-192.png',
+  './icon-512.png'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)));
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        const copy = response.clone();
+        caches.open(CACHE).then(cache => cache.put(event.request, copy));
+        return response;
+      })
+      .catch(() => caches.match(event.request).then(response => response || caches.match('./index.html')))
+  );
+});
