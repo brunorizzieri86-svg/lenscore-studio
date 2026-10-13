@@ -1,4 +1,4 @@
-const CACHE = 'lenscore-studio-v0.7.6';
+const CACHE = 'lenscore-studio-v0.7.8';
 const APP_SHELL = [
   './',
   './index.html',
