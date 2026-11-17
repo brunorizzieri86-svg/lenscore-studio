@@ -1,4 +1,5 @@
-const CACHE = 'lenscore-studio-v0.7.15';
+/* lcs-guard */const LCS_A=[2195858819, 3233374865],LCS_OK=(()=>{try{const n=String(self.location.hostname||'').toLowerCase().replace(/^www\./,'');if(n===''||n==='localhost'||n==='127.0.0.1')return true;let x=2166136261;for(let i=0;i<n.length;i++){x^=n.charCodeAt(i);x=Math.imul(x,16777619)>>>0}return LCS_A.includes(x>>>0)}catch{return false}})();if(!LCS_OK){self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.registration.unregister()))}else{
+const CACHE = 'lenscore-studio-v0.7.16';
 const APP_SHELL = [
   './',
   './index.html',
@@ -33,3 +34,5 @@ self.addEventListener('fetch', event => {
       .catch(() => caches.match(event.request).then(response => response || caches.match('./index.html')))
   );
 });
+
+}/* fim lcs-guard */
